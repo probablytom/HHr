@@ -143,6 +143,16 @@ h3 {
 .nav-mobile {
   display: none;
   text-align: right;
+  margin-top: 10px;
+}
+
+.nav-mobile i {
+  font-size: 30px;
+  color: #323232;
+}
+
+.nav-mobile i:hover {
+  color: #12bf82;
 }
 
 .hero-text {
