@@ -213,8 +213,8 @@ h3 {
   /* Nav menu for mobile */
   .nav-desktop {display: none; }
   .nav-mobile {display: inline-block; }
-  .logo {width: 90%; border: 1px solid blue;}
-  .nav-mobile {width: 10%; border: 1px solid red;}
+  .logo {width: 90%; }
+  .nav-mobile {width: 10%; }
 }
 
 @media (max-width: 550px) {
