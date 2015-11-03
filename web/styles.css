@@ -107,29 +107,33 @@ h3 {
   z-index: 50;
 }
 
-.nav {
+.nav-desktop {
   display: inline-block;
   width: 30%;
 }
 
-.nav ul {
+.nav-desktop ul {
   list-style-type: none;
   padding: 0;
 }
 
-.nav ul li {
+.nav-desktop ul li {
   display: inline-block;
 }
 
-.nav ul li a {
+.nav-desktop ul li a {
   text-decoration: none;
   padding: 10px 16px !important;
   font-family: 'Slabo 27px', serif;
 }
 
-.nav ul li a:hover {
+.nav-desktop ul li a:hover {
   color: white;
   background-color: #12bf82;
+}
+
+.nav-mobile {
+  text-align: right;
 }
 
 .hero-text {
@@ -142,6 +146,8 @@ h3 {
 
 .hero-text h2 {
   color: white;
+  width: 50%;
+  margin: 0 auto;
   font-size: 50px;
   font-family: "ArchisticoSimple";
   font-weight: normal;
@@ -198,13 +204,25 @@ h3 {
 
 
 @media (max-width: 750px) {
-  .video-overlay, .video-wrapper {
-    display: none;
-  }
-  .mobile-hero {
-    display: block;
-    position: absolute;
-  }
+  /* Replace hero video with image */
+  .video-overlay,
+  .video-wrapper {display: none; }
+  .mobile-hero {display: block; }
+  
+  /* Nav menu for mobile */
+  .nav-desktop {display: none; }
+  .nav-mobile {display: inline-block; }
+  .logo {width: 90%; border: 1px solid blue;}
+  .nav-mobile {width: 10%; border: 1px solid red;}
+}
+
+@media (max-width: 550px) {
+  .hero-text h2 {width: 75%; font-size: 42px; }
+}
+
+@media (max-width: 360px) {
+  .logo span {font-size: 26px; }
+  .logo img { width: 30px; }
 }
 
 
