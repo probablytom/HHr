@@ -321,6 +321,7 @@ h3 {
     border-bottom-left-radius: 5px;
     border-top-right-radius: 0;
   }
+  .column-text {width: 90%; margin: 0 auto;}
 }
 
 @media (max-width: 360px) {
