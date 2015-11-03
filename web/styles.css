@@ -1,0 +1,150 @@
+
+* {
+  box-sizing: border: box;
+  font-family: sans-serif;
+  color: #2a2a2a;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: white;
+  margin: 15px;
+}
+
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1300px;
+}
+
+.logo {
+  width: 67%;
+  display: inline-block;
+}
+
+.logo a {
+  text-decoration: none;
+}
+
+.logo img {
+  width: 40px;
+  -webkit-transition: 1s ease-in-out;
+  -moz-transition: 1s ease-in-out;
+  -o-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+
+.logo img:hover {
+  -ms-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+
+.logo span {
+  font-family: sans-serif;
+  font-size: 36px;
+  margin-right: 15px;
+}
+
+.hero {
+  position: relative;
+}
+
+#bg-video {
+  width: 100%;
+  margin-top: -200px;
+}
+
+.video-wrapper {
+  display: block;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  position: absolute;
+  z-index: -50;
+}
+
+.video-overlay {
+  background-color: rgba(0,0,0,0.4);
+  position: absolute;
+  width: 100%;
+  height: 500px;
+  z-index: 50;
+}
+
+.nav {
+  display: inline-block;
+  width: 30%;
+}
+
+.nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.nav ul li {
+  display: inline-block;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  padding: 10px 16px !important;
+}
+
+.nav ul li a:hover {
+  color: white;
+  background-color: #1ea173;
+}
+
+.sign-up {
+  position: absolute;
+  width: 100%;
+  display: inline-block;
+  z-index: 100;
+}
+
+.sign-up form {
+  margin: 0 auto;
+  width: 440px;
+  margin-top: 400px;
+}
+
+.sign-up input[type=email] {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  outline: 0;
+  border: 0;
+  padding: 10px;
+  padding-left: 20px;
+  width: 250px;
+  height: 50px;
+  font-size: 24px;
+}
+
+.sign-up input[type=button] {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  outline: 0;
+  border: 0;
+  padding: 21px 20px;
+  width: 160px;
+  font-size: 24px;
+  background-color: #1ea173;
+  color: white;
+}
+
+
+
+
+
+
+
