@@ -219,6 +219,31 @@ h3 {
   font-family: 'Slabo 27px', serif;
 }
 
+.three-columns .wrapper {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+}
+
+.column {
+  flex: 1;
+  padding: 15px;
+}
+
+.number-icon {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background-color: #dadada;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 80px;
+  padding-top: 0px;
+  font-family: 'Slabo 27px', serif;
+}
 
 
 
