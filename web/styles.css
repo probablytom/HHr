@@ -90,6 +90,10 @@ h3 {
   margin-top: -200px;
 }
 
+.video-wrapper video {
+  object-fit: none;
+}
+
 .video-wrapper {
   display: block;
   width: 100%;
