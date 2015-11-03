@@ -277,6 +277,10 @@ h3 {
   .logo, .nav-desktop {width: 50%; }
 }
 
+@media (max-width: 840px) {
+  .column-text {font-size: 16px; }
+}
+
 @media (max-width: 750px) {
   /* Replace hero video with image */
   .video-overlay,
@@ -288,6 +292,11 @@ h3 {
   .nav-mobile {display: inline-block; }
   .logo {width: 90%; }
   .nav-mobile {width: 10%; }
+
+  /* open three columns out to 100% width */
+  .three-columns .wrapper {display: block; }
+  .column {width: 100%; display: block; flex: 0;}
+  .column-text {width: 60%; margin: 0 auto;}
 }
 
 @media (max-width: 540px) {
