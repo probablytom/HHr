@@ -1,21 +1,5 @@
-/*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
+@import url(https://fonts.googleapis.com/css?family=Slabo+27px|Arvo:400,400italic,700,700italic);
+
 * {
     -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
     box-sizing: border-box;
@@ -105,12 +89,37 @@ body {
   width: 100%;
   height: 100%;
   position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  overflow: scroll;
+  -webkit-overflow-scrolling:touch;
+  transform: translate3d( 0px,0px,0px);
   z-index: -100;
-  background-image: url(http://i.imgur.com/zmE8qnd.jpg);
+  background-image: url(http://i.imgur.com/crjhZmT.jpg);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+.welcome img {
+  margin: 0 auto;
+  width: 80px;
+  display: inline-block;
+  position: fixed;
+  left: 42%;
+  top: 20px;
+}
+
+.welcome h1 {
+  text-align: center;
+  margin-top: 105px;
+  color: white;
+  font-family: 'Slabo 27px', serif;;
+  font-size: 36px;
+  font-weight: normal;
 }
 
 .connect {
@@ -130,13 +139,14 @@ body {
   height: 100%;
   color: white;
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 18px;
   text-align: center;
   padding-top: 18px;
+  font-family: 'Slabo 27px', serif;
 }
 
-.connect a.sign-up {background-color: #12bf82; }
-.connect a.log-in {background-color: #525dc9; }
+.connect a.sign-up {background-color: #05c26b; }
+.connect a.log-in {background-color: #4374f0; }
 
 @keyframes fade {
     from { opacity: 1.0; }
