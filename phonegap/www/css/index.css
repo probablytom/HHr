@@ -236,7 +236,6 @@ body {
   width: 65%;
   vertical-align: top;
   padding: 10px 0 0 20px;
-  border: 1px solid orange;
 }
 
 .names .type {
@@ -302,6 +301,9 @@ body {
   color: #272a29;
 }
 
+.verification.section {
+  border-bottom: 0;
+}
 
 
 
