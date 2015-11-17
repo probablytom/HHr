@@ -1,31 +1,46 @@
+
+/* COLOURS:
+
+MID-GREY:       abb0b8 (HRs, sidenotes...)
+LINK BLUE:      195ad1
+PROGRESS GREEN: 3fd18e
+TEXT GREY:      272a29
+
+*/
+
+
 @import url(https://fonts.googleapis.com/css?family=Slabo+27px|Arvo:400,400italic,700,700italic);
 
 * {
-    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
-    box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+  box-sizing: border-box !important;
 }
 
-a {text-decoration: none;}
+a {text-decoration: none; color: inherit; }
+.bold {font-weight: bold; }
+.sidenote {color: #abb0b8; display: block; width: 100%; }
+
 
 body {
-    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
-    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
-    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
-    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
-    font-size:12px;
-    height:100%;
-    margin:0px;
-    padding:0px;
-    width:100%;
+  -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+  -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+  -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+  font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+  font-size:12px;
+  height:100%;
+  margin:0px;
+  padding:0px;
+  width:100%;
+  color: #272a29;
 }
 
 /* Portrait layout (default) */
 .app {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    padding:0;
-    margin: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding:0;
+  margin: 0;
 }
 
 /* Landscape layout (with min-width) */
@@ -164,3 +179,133 @@ body {
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
 }
+
+
+
+
+
+
+/* **************
+**** PROFILE ****
+************** */
+
+.progess-bar {
+  display: inline-block;
+  width: 89%;
+  height: 20px;
+  border-radius: 10px;
+  border: 1px solid #3fd18e;
+  padding: 0 10px;
+  line-height: 1.5;
+  background: linear-gradient(90deg, #96f0c7 70%, white 29%);
+  color: #3fd18e;
+}
+
+.edit {
+  display: inline-block;
+  width: 10%;
+  text-align: right;
+  font-size: 14px;
+}
+
+.edit a {
+  color: #195ad1;
+}
+
+
+.section {
+  border-bottom: 1px solid #abb0b8;
+  padding: 15px 0;
+}
+
+.photo {
+  width: 90px;
+  height: 90px;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.photo img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.name-type {
+  display: inline-block;
+  font-size: 24px;
+  width: 65%;
+  vertical-align: top;
+  padding: 10px 0 0 20px;
+  border: 1px solid orange;
+}
+
+.names .type {
+  font-size: 18px;
+  color: #abb0b8;
+  padding-top: 8px;
+}
+
+.identity.section div {
+  padding: 3px;
+}
+
+.option-wrapper {
+  width: 25%;
+  display: inline-block;
+  padding: 10px;
+}
+
+.accepting.section .option {
+  border: 1px solid #abb0b8;
+  border-radius: 4px;
+  padding: 4px;
+  width: 100%;
+  height: 70px;
+  padding: 10px 10px;
+  text-align: center;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.verified,
+.unverified {
+  font-size: 18px;
+  padding: 4px 0;
+  border-radius: 4px;
+  margin: 5px 0;
+}
+
+.unverified {
+  padding: 8px 25px;
+}
+
+.facebook {
+  background-color: #525dc9;
+  color: white;
+}
+
+.phone {
+  background-color: #525dc9;
+  color: white;
+}
+
+
+.verified:before {
+  font-family: FontAwesome;
+  content: "\f058";
+  color: #3fd18e;
+  padding-right: 8px;
+}
+
+.verified {
+  background-color: white;
+  color: #272a29;
+}
+
+
+
+
+
+
+
+
