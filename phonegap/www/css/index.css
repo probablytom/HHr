@@ -250,7 +250,11 @@ body {
 }
 
 .identity.section div {
-  padding: 3px;
+  padding-bottom: 14px;
+}
+
+.identity.section div:last-child {
+  padding-bottom: 5px;
 }
 
 .option-wrapper {
