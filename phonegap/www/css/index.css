@@ -195,7 +195,7 @@ body {
 
 .progess-bar {
   display: inline-block;
-  width: 89%;
+  width: 86%;
   height: 20px;
   border-radius: 10px;
   border: 1px solid #3fd18e;
@@ -203,11 +203,12 @@ body {
   line-height: 1.5;
   background: linear-gradient(90deg, #96f0c7 70%, white 29%);
   color: #3fd18e;
+  font-size: 13px;
 }
 
 .edit {
   display: inline-block;
-  width: 10%;
+  width: 12%;
   text-align: right;
   font-size: 14px;
 }
