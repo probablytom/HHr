@@ -306,6 +306,71 @@ body {
 }
 
 
+/* ***********
+**** EDIT ****
+*********** */
+
+
+.gender-checkbox {
+  max-width: 40px;
+  width: 30%;
+  vertical-align: top;
+  position: relative;
+  display: inline-block;
+}
+
+.gender-checkbox label {
+  cursor: pointer;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 0;
+  left: 0;
+  background: #eee;
+  border:1px solid #ddd;
+  border-radius: 4px;
+}
+
+.gender-checkbox label:after {
+  font-size: 20px;
+  opacity: 0.3;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  top: 9px;
+  left: 10px;
+  font-family: FontAwesome;
+}
+
+.gender-checkbox.male   label:after {content: '\f222'; }
+.gender-checkbox.female label:after {content: '\f221' !important; }
+.gender-checkbox.other  label:after {content: '\f22d' !important; }
+
+.gender-checkbox label:hover::after {
+  opacity: 0.8;
+}
+
+/**
+ * Create the checkbox state for the tick
+ */
+.gender-checkbox input[type=checkbox]:checked + label:after {
+  opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
