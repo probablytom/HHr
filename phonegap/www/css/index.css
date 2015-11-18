@@ -193,6 +193,10 @@ body {
   height: 135px;
 }
 
+.identity.section {
+  height: 160px;
+}
+
 .progess-bar {
   display: inline-block;
   width: 86%;
@@ -250,7 +254,7 @@ body {
 }
 
 .identity.section div {
-  padding-bottom: 14px;
+  padding-bottom: 16px;
 }
 
 .identity.section div:last-child {
@@ -330,13 +334,32 @@ body {
   text-align: left;
 }
 
-.name-type.edit input {
+input {
   border: 0;
+  border-radius: 0;
   border-bottom: 1px solid #cbcbcb;
   display: inline-block;
-  width: 50%;
   padding: 0 0 5px 5px;
   font-size: 15px;
+}
+
+.identity.section label {
+  width: 35%;
+  display: inline-block;
+}
+
+.identity.section i.fa {
+  padding-right: 8px;
+}
+
+.identity.section input {
+  width: 63%;
+  display: inline-block;
+  padding-bottom: 9px;
+}
+
+.name-type.edit input {
+  width: 50%;
 }
 
 .name-type.edit label {
@@ -345,11 +368,12 @@ body {
   width: 40%;
 }
 
-.name-type.edit select {
+.name-type.edit select,
+.identity.section input[type="date"] {
   background: transparent;
   font-size: 15px;
   width: 50%;
-  padding: 5px;
+  padding: 9px;
   line-height: 1;
   border: 0;
   border-bottom: 1px solid #cbcbcb;

@@ -57,16 +57,18 @@
 
         <div class="identity section">
           
+          <!-- gender not changeable once set at sign up => common practice -->
+          <label for="gender"><i class="fa fa-venus-mars"></i>Gender:</label>
+          <input type="text" id="male" value="Male" style="color: #cbcbcb;" readonly />
+
           <label for="city"><i class="fa fa-globe"></i> Lives in</label>
-          <input type-"text" value="Edinburgh" />
+          <input type="text" id="city" value="Edinburgh" />
           
           <label for="dob"><i class="fa fa-birthday-cake"></i> Date of birth</label>
-          <input type="date" />
-
-          <!-- gender not changeable once set at sign up => common practice -->
-
-          <label for="languages"><i class="fa fa-comments-o"></i> Languages spoken</label>
-          <span class="bold">EN, FR, ES, PT</span>
+          <input type="date" id="dob" value="1977-09-22" />
+          
+          <label for="languages"><i class="fa fa-comments-o"></i> Languages</label>
+          <input type="text" id="languages" value="EN, FR, ES, PT" />
         </div>
 
         <div class="accepting editing section">
@@ -123,7 +125,7 @@
 
         <div class="verification section">
           <div class="sidenote">
-            Verifying your identity makes your account more trustworthy
+            Verifying your identity makes you more trustworthy
           </div>
 
           <div class="email verified">Email verified</div>
