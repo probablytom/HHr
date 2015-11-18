@@ -26,7 +26,7 @@ body {
   -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
   -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
   font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
-  font-size:12px;
+  font-size:14px;
   height:100%;
   margin:0px;
   padding:0px;
@@ -189,6 +189,10 @@ body {
 **** PROFILE ****
 ************** */
 
+.names.section {
+  height: 135px;
+}
+
 .progess-bar {
   display: inline-block;
   width: 89%;
@@ -310,6 +314,52 @@ body {
 **** EDIT ****
 *********** */
 
+.change-photo {
+  position: absolute;
+  left: 95px;
+  top: 185px;
+}
+
+.name-type.edit {
+  padding-top: 0;
+  text-align: left;
+}
+
+.name-type.edit input {
+  border: 0;
+  border-bottom: 1px solid #cbcbcb;
+  display: inline-block;
+  width: 50%;
+  padding: 0 0 5px 5px;
+  font-size: 15px;
+}
+
+.name-type.edit label {
+  font-size: 15px;
+  display: inline-block;
+  width: 40%;
+}
+
+.name-type.edit select {
+  background: transparent;
+  font-size: 15px;
+  width: 50%;
+  padding: 5px;
+  line-height: 1;
+  border: 0;
+  border-bottom: 1px solid #cbcbcb;
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+
+.name-type.edit .select-label:after {
+  content: "\f078";
+  position:absolute;
+  font-family: FontAwesome;
+  color: #cbcbcb;
+  left: 297px;
+  padding-top: 2px;
+}
 
 .gender-checkbox {
   max-width: 40px;
