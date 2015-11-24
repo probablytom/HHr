@@ -47,3 +47,19 @@ var app = {
         console.log('Received Event: ' + id);
     }
 };
+
+// Give this the Id of an Audio element, and it'll play the audio 
+// Source: http://bit.ly/1I8oz6Y
+function playAudio(id) {
+  var audioElement = document.getElementById(id);
+  var url = audioElement.getAttribute('src');
+  var my_media = new Media(url,
+    //success callback
+    function () { console.log("playAudio():Audio Success"); },
+    // error callback
+	  function (err) { console.log("playAudio():Audio Error: " + err); }
+	  );
+	  // Play audio
+	  my_media.play();
+  }
+}
