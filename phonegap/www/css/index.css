@@ -430,16 +430,48 @@ input {
   opacity: 0.8;
 }
 
-/**
- * Create the checkbox state for the tick
- */
 .gender-checkbox input[type=checkbox]:checked + label:after {
   opacity: 1;
 }
 
+button#state {
+  width: 100%;
+  border: 0;
+  border-radius: 1px;
+  padding: 10px 0;
+  background-color: #424242;
+  color: white;
+  font-size: 14px;
+}
 
+button#state.extended-confirm {
+  height: 60px;
+}
 
+button#state.extended-confirm:after {
+  content: 'Are you sure?';
+  display: block;
+  padding: 5px;
+  font-weight: 12px;
+}
 
+#confirm-switch {
+  visibility: hidden;
+}
+
+button#yep,
+button#cancel {
+  background-color: #3fd18e;
+  color: white;
+  width: 50%;
+  padding: 10px 0;
+  border: 0;
+  font-size: 14px;
+}
+
+button#cancel {
+  background-color: #c71919;
+}
 
 
 

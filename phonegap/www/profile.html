@@ -66,6 +66,25 @@
         <div class="facebook unverified">Verify with Facebook</div>
       </div>
 
+      <div class="switch">
+        <button type="button" id="state">Switch to hitch-hiker</button>
+
+        <div id="confirm-switch">
+          <button id="yep">Yep</button><button type="button" id="cancel">Cancel</button>
+        </div>
+        <script>
+          $('.switch button#state').click(function() {
+            $('#confirm-switch').css({'visibility': 'visible',});
+            $('button#state').addClass('extended-confirm');
+          });
+          $('.switch button#cancel').click(function() {
+            $('#confirm-switch').css({'visibility': 'hidden',});
+            $('button#state').removeClass('extended-confirm');
+          });
+        </script>
+
+      </div>
+
     </div> <!-- /wrapper -->
 
   </div> <!-- /app -->
