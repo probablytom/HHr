@@ -475,8 +475,48 @@ button#cancel {
 
 
 
+.review-section {
+  height: 100px;
+  border-bottom: 1px solid #e6e6e6;
+  position: relative;
+}
 
+.review-section span {
+  position: relative;
+  top: 15%;
+}
 
+.review-section span.number {
+  font-size: 60px;
+  color: #e6e6e6;
+}
+
+.review-section span.text {
+  padding-left: 15px;
+  font-size: 25px;
+  top: 5%;
+}
+
+.review-section:after {
+  font-family: FontAwesome;
+  content: '\f054';
+  color: #e6e6e6;
+  font-size: 30px;
+  right: 8px;
+  position: absolute;
+  top: 37px;
+  transform: scale(0.6,2.3);
+  -webkit-transform: scale(0.6,2.3);
+  -moz-transform: scale(0.6,2.3);
+  -ms-transform: scale(0.6,2.3);
+  -o-transform: scale(0.6,2.3);
+}
+
+.reviews.wrapper a,
+.reviews.wrapper a:hover {
+  text-decoration: none;
+  color: inherit;
+}
 
 
 
