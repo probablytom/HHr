@@ -474,6 +474,10 @@ button#cancel {
 }
 
 
+/* **************
+**** REVIEWS ****
+************** */
+
 
 .review-section {
   height: 100px;
@@ -497,7 +501,8 @@ button#cancel {
   top: 5%;
 }
 
-.review-section:after {
+/* Only .review-section with .after will show the arrow */
+.review-section.after:after {
   font-family: FontAwesome;
   content: '\f054';
   color: #e6e6e6;
