@@ -523,6 +523,43 @@ button#cancel {
   color: inherit;
 }
 
+.review-section.to-rate .right {
+  vertical-align: top;
+  display: inline-block;
+  width: 60%;
+  padding-top: 10px;
+}
+
+.review-section.to-rate span {
+  padding-left: 15px;
+  width: 100%;
+  display: inline-block;
+}
+
+h1 {
+  font-weight: normal;
+  color: #e5e5e5;
+}
+
+.review-section.to-rate span.name {
+  vertical-align: top;
+  font-size: 20px;
+}
+
+.review-section.to-rate img {
+  width: 80px;
+  border-radius: 50%;
+  margin-top: 10px;
+}
+
+.right span.sidenote {
+  font-size: 12px;
+}
+
+.right span.stars {
+  font-size: 20px;
+  padding: 7px 15px;
+}
 
 
 
