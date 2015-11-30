@@ -61,5 +61,4 @@ function playAudio(id) {
 	  );
 	  // Play audio
 	  my_media.play();
-  }
 }
