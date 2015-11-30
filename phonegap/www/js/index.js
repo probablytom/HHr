@@ -16,7 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-var app = {
+ var app = {
     // Application Constructor
     initialize: function() {
         this.bindEvents();
@@ -45,6 +45,40 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
+
+        var pushNotification = window.plugins.pushNotification;
+        pushNotification.register(app.successHandler, app.errorHandler,{"senderID":"hitchhikr-1145","ecb":"app.onNotificationGCM"});
+    }, 
+
+		// result contains any message sent from the plugin call
+     successHandler: function(result) {
+         alert('Callback Success! Result = '+result)
+     },
+
+     onNotificationGCM: function(e) {
+        switch( e.event )
+        {
+            case 'registered':
+            if ( e.regid.length > 0 )
+            {
+                console.log("Regid " + e.regid);
+                alert('registration id = '+e.regid);
+            }
+            break;
+
+            case 'message':
+              // this is the actual push notification. its format depends on the data model from the push server
+              alert('message = '+e.message+' msgcnt = '+e.msgcnt);
+              break;
+
+              case 'error':
+              alert('GCM error = '+e.msg);
+              break;
+
+              default:
+              alert('An unknown GCM event has occurred');
+              break;
+        }
     }
 };
 
@@ -57,8 +91,8 @@ function playAudio(id) {
     //success callback
     function () { console.log("playAudio():Audio Success"); },
     // error callback
-	  function (err) { console.log("playAudio():Audio Error: " + err); }
-	  );
+    function (err) { console.log("playAudio():Audio Error: " + err); }
+    );
 	  // Play audio
 	  my_media.play();
   }
