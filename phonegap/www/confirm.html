@@ -26,7 +26,7 @@
     </div>
 
     <div class="lift-workflow wrapper">
-      <h1>CONFIRMED!</h1>
+      <h1 id="confirmed_message">CONFIRMED!</h1>
       <div class="logo-wrapper">
         <img src="http://i.imgur.com/AHILLcR.png" />
       </div>
@@ -37,6 +37,19 @@
 
 
     <script type="text/javascript">
+
+      /*var url = "https://www.dropbox.com/s/g9s3jzkjnp1ipd9/confirm_earcon.mp3?dl=0";//audioElement.getAttribute('src');
+      var my_media = new Media(url,
+        //success callback
+        function () { console.log("playAudio():Audio Success");},//$("#article3").css("background-color", "green"); },
+        // error callback
+        function (err) { console.log("playAudio():Audio Error: " + err);}//$("#article3").css("background-color", "black"); }
+      );
+      // Play audio
+      my_media.play();*/
+
+      
+
       window.setTimeout(function () {
           location.href = "confirm.html";
       }, 50000);
@@ -63,6 +76,34 @@
           }, 1000);
       }
       startTimer(16, $('#time'));
+
+      function alertDismissed() {
+        // do something
+      }
+      function showAlert() {
+        navigator.notification.alert(
+          'Andrew, 38M, has offered a lift!',  // message
+          alertDismissed,         // callback
+          'Lift Found',            // title
+          'Crikey!'                  // buttonName
+        ); 
+      }
+      //showAlert()
+      $("#confirmed_message").click(function() {
+        showAlert();
+      });
+
+      $( document ).ready(function() {
+        startTimer(16, $('#time'));
+        showAlert();
+      });
+
+      showAlert();
+
+      document.addEventListener("deviceready", function(){
+        showAlert();
+      },true);
+
     </script>
   </div>
 

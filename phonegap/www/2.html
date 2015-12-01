@@ -21,7 +21,7 @@
 
   <div class="lift-workflow wrapper">
     <a class="back-link" href="index.html"><</a>
-    <h1>TELL US...</h1>
+    <h1 id="tellus">TELL US...</h1>
     <h2>How many people</h2>
     <input id="minus" type="button" value="-" />
     
@@ -52,6 +52,25 @@
         }
         else { $('#plus').addClass('inactive'); }
       });
+
+function alertDismissed() {
+        // do something
+      }
+
+      function showAlert() {
+        navigator.notification.alert(
+          'Hacky hack to get things working, you shouldn\'t see me!',  // message
+          alertDismissed,         // callback
+          'Ignore Me',            // title
+          'Phonegap is troublesome'                  // buttonName
+        );
+      }
+
+      $("#tellus").click(function() {
+          showAlert();
+      });
+
+
     </script>
 
 

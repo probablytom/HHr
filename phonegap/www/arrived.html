@@ -20,7 +20,37 @@
     </div>
 
     <div class="lift-workflow wrapper">
-      <h1>Can you see Andrew?</h1>
+      <h1 id="arrived_message">Can you see Andrew?</h1>
+
+      <script type="text/javascript">
+      /*var url = "https://www.dropbox.com/s/ovx2l49b7nje9uh/arrived_earcon.wav?dl=0";//audioElement.getAttribute('src');
+      var my_media = new Media(url,
+        //success callback
+        function () { console.log("playAudio():Audio Success");},//$("#article3").css("background-color", "green"); },
+        // error callback
+        function (err) { console.log("playAudio():Audio Error: " + err);}//$("#article3").css("background-color", "black"); }
+      );
+      // Play audio
+      my_media.play();*/
+      function alertDismissed() {
+        // do something
+      }
+
+      function showAlert() {
+        navigator.notification.alert(
+          'Andrew has arrived!',  // message
+          alertDismissed,         // callback
+          'Your Chariot Awaits',            // title
+          'Thanks, I can see him'                  // buttonName
+        );
+      }
+
+      $("#arrived_message").click(function() {
+          showAlert();
+      });
+
+      </script>
+
       <div class="logo-wrapper">
         <img src="http://i.imgur.com/AHILLcR.png" />
       </div>
