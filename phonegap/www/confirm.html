@@ -38,18 +38,6 @@
 
     <script type="text/javascript">
 
-      /*var url = "https://www.dropbox.com/s/g9s3jzkjnp1ipd9/confirm_earcon.mp3?dl=0";//audioElement.getAttribute('src');
-      var my_media = new Media(url,
-        //success callback
-        function () { console.log("playAudio():Audio Success");},//$("#article3").css("background-color", "green"); },
-        // error callback
-        function (err) { console.log("playAudio():Audio Error: " + err);}//$("#article3").css("background-color", "black"); }
-      );
-      // Play audio
-      my_media.play();*/
-
-      
-
       window.setTimeout(function () {
           location.href = "confirm.html";
       }, 50000);
@@ -88,21 +76,38 @@
           'Crikey!'                  // buttonName
         ); 
       }
-      //showAlert()
+
       $("#confirmed_message").click(function() {
         showAlert();
+        var url = "http://hhr.cassbrooks.co.uk/confirm_earcon.mp3";//audioElement.getAttribute('src');
+      var my_media = new Media(url,
+        //success callback
+        function () { console.log("playAudio():Audio Success");},//$("#article3").css("background-color", "green"); },
+        // error callback
+        function (err) { console.log("playAudio():Audio Error: " + err);}//$("#article3").css("background-color", "black"); }
+      );
+      // Play audio
+      my_media.play();
       });
 
       $( document ).ready(function() {
         startTimer(16, $('#time'));
-        showAlert();
       });
 
-      showAlert();
 
-      document.addEventListener("deviceready", function(){
+      window.setTimeout(function() {
         showAlert();
-      },true);
+        var url = "http://hhr.cassbrooks.co.uk/confirm_earcon.mp3";//audioElement.getAttribute('src');
+        var my_media = new Media(url,
+          //success callback
+          function () { console.log("playAudio():Audio Success"); },//$("#article3").css("background-color", "green"); },
+          // error callback
+          function (err) { console.log("playAudio():Audio Error: " + err);  }//$("#article3").css("background-color", "black"); }
+        );
+        // Play audio
+        my_media.play();
+      }, 500);
+
 
     </script>
   </div>

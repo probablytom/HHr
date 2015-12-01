@@ -23,15 +23,7 @@
       <h1 id="arrived_message">Can you see Andrew?</h1>
 
       <script type="text/javascript">
-      /*var url = "https://www.dropbox.com/s/ovx2l49b7nje9uh/arrived_earcon.wav?dl=0";//audioElement.getAttribute('src');
-      var my_media = new Media(url,
-        //success callback
-        function () { console.log("playAudio():Audio Success");},//$("#article3").css("background-color", "green"); },
-        // error callback
-        function (err) { console.log("playAudio():Audio Error: " + err);}//$("#article3").css("background-color", "black"); }
-      );
-      // Play audio
-      my_media.play();*/
+      
       function alertDismissed() {
         // do something
       }
@@ -44,10 +36,18 @@
           'Thanks, I can see him'                  // buttonName
         );
       }
-
-      $("#arrived_message").click(function() {
-          showAlert();
-      });
+      window.setTimeout(function() {
+        showAlert();
+        var url = "http://hhr.cassbrooks.co.uk/arrived_earcon.wav";//audioElement.getAttribute('src');
+        var my_media = new Media(url,
+          //success callback
+          function () { console.log("playAudio():Audio Success"); },//$("#article3").css("background-color", "green"); },
+          // error callback
+          function (err) { console.log("playAudio():Audio Error: " + err);  }//$("#article3").css("background-color", "black"); }
+        );
+        // Play audio
+        my_media.play();
+      }, 500);
 
       </script>
 
