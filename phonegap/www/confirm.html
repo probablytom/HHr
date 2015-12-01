@@ -21,8 +21,8 @@
 
   <div class="lift-workflow wrapper">
     <a class="back-link" href="4.html"><</a>
-    <h1 class="static">Tap to find your lift</h1>
-    <h1 class="gif">Searching for a lift!</h1>
+    <h1 class="static">CONFIRMED!</h1>
+    <h1 class="gif">CONFIRMED!</h1>
     <div class="logo-wrapper">
       <img class="static" src="http://i.imgur.com/AHILLcR.png" />
       <img class="gif" src="http://i.imgur.com/bZep9Ii.gif" />
@@ -34,14 +34,18 @@
   $('.static').click(function() {
     $('.static').css('display', 'none');
     $('.gif').css('display', 'block');
-    window.setTimeout(function () {
-        location.href = "confirm.html";
-    }, 5000);
   });
 
   $('.gif').click(function() {
     $('.static').css('display', 'block');
     $('.gif').css('display', 'none');
+  });
+
+  $(document).ready(function () {
+      // Handler for .ready() called.
+      window.setTimeout(function () {
+          location.href = "confirm.html";
+      }, 5000);
   });
   </script>
 
