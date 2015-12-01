@@ -576,5 +576,41 @@ h1 {
 
 
 
+.lift-workflow {
+  text-align: center;
+  position: relative;
+}
+
+.back-link,
+.forward-link {
+  position: absolute;
+  background-color: #e6e6e6;
+  height: 60px;
+  padding: 18px 4px 10px 10px;
+  font-weight: bold;
+  top: 150px;
+}
+
+.back-link {
+  left: 0;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.forward-link {
+  right: 0;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+
+
+
+
+
+
+
+
+
 
 
