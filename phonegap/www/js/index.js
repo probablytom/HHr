@@ -47,7 +47,7 @@
         console.log('Received Event: ' + id);
 
         var pushNotification = window.plugins.pushNotification;
-        pushNotification.register(app.successHandler, app.errorHandler,{"senderID":"hitchhikr-1145","ecb":"app.onNotificationGCM"});
+        pushNotification.register(app.successHandler, app.errorHandler,{"senderID":"191029629250","ecb":"app.onNotificationGCM"});
     }, 
 
 		// result contains any message sent from the plugin call
