@@ -12,6 +12,7 @@
 </head>
 
 <body>
+  <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
   <div class="app">
 
   <div class="nav">
@@ -22,7 +23,39 @@
     <a class="back-link" href="index.html"><</a>
     <h1>TELL US...</h1>
     <h2>How many people</h2>
-    <input type="text" />
+    <input id="minus" type="button" value="-" />
+    
+    <span id="number-people">
+    </span>
+    
+    <script type="text/javascript">
+      var x = 1;
+      $('#number-people').html(x);
+    </script>
+    
+    <input type="button"  id="plus" value="+" />
+
+    <script type="text/javascript">
+      $('#minus').click(function() {
+        x = $('#number-people').html();
+        if (x > 1) {
+          $('#number-people').html( x-1 );
+          $('#plus').css('background-color', '#cbcbcb');
+        }
+        else { $('#minus').css('background-color', '#e6e6e6'); }
+      });
+      $('#plus').click(function() {
+        x = $('#number-people').html();
+        if (x < 5) {
+          $('#number-people').html( +x+1 );
+          $('#minus').css('background-color', '#cbcbcb');
+        }
+        else { $('#plus').css('background-color', '#e6e6e6'); }
+      });
+    </script>
+
+
+
     <a class="forward-link" href="3.html">></a>
   </div>
 

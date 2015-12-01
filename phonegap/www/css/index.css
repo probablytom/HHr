@@ -605,9 +605,21 @@ h1 {
 }
 
 
+.lift-workflow input[type=text] {
+  border: 1px solid #cbcbcb;
+  display: inline-block;
+  padding: 10px;
+  font-size: 15px;
+  background-color: #fafafa;
+  width: 70%;
+}
 
 
-
+.lift-workflow input:active,
+.lift-workflow input:focus {
+  border: 0;
+  outline: 0;
+}
 
 
 
