@@ -48,7 +48,42 @@ var app = {
     }
 };
 
-var mode = "hhr";
+var mode;
+
+function setMode(newMode) {
+  mode = newMode;
+}
+
+function getMode() {
+  return mode;
+}
+
+function switchMode() {
+  if (getMode() == 'hhr') {setMode('driver');}
+  else {setMode('driver')};
+}
+
+function checkModeText() {
+  if (getMode() == undefined) {
+    setMode('hhr');
+  };
+
+  if (getMode() == "hhr") {
+    $('.mode').html('Hitchhiker');
+    $('.mode.switchto').html('Driver');
+    $('li.lift a').attr('href', 'index.html');
+    $('li.lift a span').html('Find lift');
+  }
+  else if (getMode() == "driver") {
+    $('.mode').html('Driver');
+    $('.mode.switchto').html('Hitchhiker');
+    $('li.lift a').attr('href', 'driver-index.html');
+    $('li.lift a span').html('Offer lift');
+  }
+  else {
+    console.log("Halp");
+  }
+}
 
 // Give this the Id of an Audio element, and it'll play the audio 
 // Source: http://bit.ly/1I8oz6Y
@@ -59,8 +94,8 @@ function playAudio(id) {
     //success callback
     function () { console.log("playAudio():Audio Success"); },
     // error callback
-	  function (err) { console.log("playAudio():Audio Error: " + err); }
-	  );
-	  // Play audio
-	  my_media.play();
+    function (err) { console.log("playAudio():Audio Error: " + err); }
+    );
+    // Play audio
+    my_media.play();
 }

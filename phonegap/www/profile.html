@@ -15,9 +15,19 @@
 <body>
   <div class="app">
 
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+      app.initialize();
+    </script>
+
     <div class="nav">
       <ul><li class="lift"><a href=""><span></span></a></li><li class="profile active"><a href="profile.html"><span>Profile</span></a></li><li class="review"><a href="reviews.html"><span>Reviews</span></a></li></ul>
     </div>
+
+    <script type="text/javascript">
+      checkModeText();
+    </script>
 
     <div class="wrapper">
 
@@ -83,10 +93,10 @@
             $('button#state').removeClass('extended-confirm');
           });
           $('.switch button#yep').click(function() {
-            if (mode == "driver") {mode = "hhr"; }
-            else {mode = "driver"; }
+            switchMode();
             checkModeText();
-            location.reload();
+            $('button#state').removeClass('extended-confirm');
+            $('#confirm-switch').css({'visibility': 'hidden',});
           });
         </script>
 
@@ -96,24 +106,7 @@
 
   </div> <!-- /app -->
 
-
-  <script type="text/javascript" src="cordova.js"></script>
-  <script type="text/javascript" src="js/index.js"></script>
   <script type="text/javascript">
-    app.initialize();
-  </script>
-
-  <script type="text/javascript">
-    function checkModeText() {
-      if (mode == "hhr") {
-        $('.mode').html('Hitchhiker');
-        $('.mode.switchto').html('Driver');
-      }
-      else {
-        $('.mode').html('Driver');
-        $('.mode.switchto').html('Hitchhiker');
-      }
-    }
     checkModeText();
   </script>
 </body>
