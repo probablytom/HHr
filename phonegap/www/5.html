@@ -12,6 +12,7 @@
 </head>
 
 <body>
+  <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
   <div class="app">
 
   <div class="nav">
@@ -20,9 +21,26 @@
 
   <div class="lift-workflow wrapper">
     <a class="back-link" href="4.html"><</a>
-    <h1>Tap to find your lift</h1>
-    <p>[logo]</p>
+    <h1 class="static">Tap to find your lift</h1>
+    <h1 class="gif">Searching for a lift!</h1>
+    <div class="logo-wrapper">
+      <img class="static" src="http://i.imgur.com/AHILLcR.png" />
+      <img class="gif" src="http://i.imgur.com/bZep9Ii.gif" />
+    </div>
+    <h3 class="gif">Tap to cancel</h3>
   </div>
+
+  <script type="text/javascript">
+  $('.static').click(function() {
+    $('.static').css('display', 'none');
+    $('.gif').css('display', 'block');
+  });
+
+  $('.gif').click(function() {
+    $('.static').css('display', 'block');
+    $('.gif').css('display', 'none');
+  })
+  </script>
 
   </div>
 
