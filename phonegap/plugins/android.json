@@ -7,13 +7,19 @@
         "files": {}
     },
     "installed_plugins": {
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
         },
         "phonegap-plugin-push": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
         },
-        "cordova-plugin-inappbrowser": {
+        "cordova-plugin-vibration": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "cordova-plugin-network-information": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
         }
     },
