@@ -48,6 +48,8 @@ var app = {
     }
 };
 
+var mode = "hhr";
+
 // Give this the Id of an Audio element, and it'll play the audio 
 // Source: http://bit.ly/1I8oz6Y
 function playAudio(id) {
