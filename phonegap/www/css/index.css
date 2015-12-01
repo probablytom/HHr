@@ -43,10 +43,6 @@ body {
   margin: 0;
 }
 
-.swipe-page {
-  padding-top: 48px !important;
-}
-
 /* Landscape layout (with min-width) */
 @media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
 }
@@ -590,7 +586,6 @@ h1 {
   position: absolute;
   background-color: #e6e6e6;
   height: 60px;
-  padding: 18px 4px 10px 10px;
   font-weight: bold;
   top: 150px;
 }
@@ -599,12 +594,14 @@ h1 {
   left: 0;
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
+  padding: 18px 10px 10px 4px;
 }
 
 .forward-link {
   right: 0;
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
+  padding: 18px 4px 10px 10px;
 }
 
 
