@@ -20,43 +20,9 @@
     </div>
 
     <div class="lift-workflow wrapper">
-      <h1>CONFIRMED!</h1>
-      <div class="logo-wrapper">
-        <img src="http://i.imgur.com/AHILLcR.png" />
-      </div>
-      <h3>Your driver is Andrew J, 38 year old male.</h3>
-      <h3>He'll be here in <span id="time">00:16</span> seconds!</h3>
-      <h4>Tap to cancel</h4>
+      <h1>Have a great journey</h1>
+      <h4>Don't forget to leave Andrew a review</h4>
     </div>
-
-
-    <script type="text/javascript">
-      window.setTimeout(function () {
-          location.href = "confirm.html";
-      }, 50000);
-
-      function startTimer(duration, display) {
-        setInterval(function() {
-          seconds = seconds < 10 ? "0" + seconds : seconds;
-          display.text("00:" + seconds);
-        }, 1000);
-      }
-
-      function startTimer(duration, display) {
-          var timer = duration, minutes, seconds;
-          setInterval(function () {
-              seconds = parseInt(timer % 60, 10);
-              seconds = seconds < 10 ? "0" + seconds : seconds;
-
-              display.text("00:" + seconds);
-
-              if (--timer == 0) {
-                window.location = "arrived.html";
-              }
-          }, 1000);
-      }
-      startTimer(16, $('#time'));
-    </script>
   </div>
 
   <a style="position: absolute; bottom: 0px;" href="welcome-page.html">WELCOME PAGE</a>
