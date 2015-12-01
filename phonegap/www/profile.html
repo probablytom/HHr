@@ -16,7 +16,7 @@
   <div class="app">
 
     <div class="nav">
-      <ul><li class="lift"><a href="index.html"><span>Find lift</span></a></li><li class="profile active"><a href="profile.html"><span>Profile</span></a></li><li class="review"><a href="reviews.html"><span>Reviews</span></a></li></ul>
+      <ul><li class="lift"><a href=""><span></span></a></li><li class="profile active"><a href="profile.html"><span>Profile</span></a></li><li class="review"><a href="reviews.html"><span>Reviews</span></a></li></ul>
     </div>
 
     <div class="wrapper">
@@ -37,7 +37,7 @@
         </div>
         <div class="name-type">
           <div class="name">Andrew J.</div>
-          <div class="type">Driver</div>
+          <div class="type mode"></div>
         </div>
       </div>
 
@@ -68,7 +68,7 @@
       </div>
 
       <div class="switch">
-        <button type="button" id="state">Switch to hitch-hiker</button>
+        <button type="button" id="state">Switch to <span class="switchto mode"></span></button>
 
         <div id="confirm-switch">
           <button id="yep">Yep</button><button type="button" id="cancel">Cancel</button>
@@ -81,6 +81,12 @@
           $('.switch button#cancel').click(function() {
             $('#confirm-switch').css({'visibility': 'hidden',});
             $('button#state').removeClass('extended-confirm');
+          });
+          $('.switch button#yep').click(function() {
+            if (mode == "driver") {mode = "hhr"; }
+            else {mode = "driver"; }
+            checkModeText();
+            location.reload();
           });
         </script>
 
@@ -96,12 +102,19 @@
   <script type="text/javascript">
     app.initialize();
   </script>
+
+  <script type="text/javascript">
+    function checkModeText() {
+      if (mode == "hhr") {
+        $('.mode').html('Hitchhiker');
+        $('.mode.switchto').html('Driver');
+      }
+      else {
+        $('.mode').html('Driver');
+        $('.mode.switchto').html('Hitchhiker');
+      }
+    }
+    checkModeText();
+  </script>
 </body>
 </html>
-
-
-
-
-
-
-
