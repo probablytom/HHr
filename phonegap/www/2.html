@@ -5,7 +5,7 @@
   <meta name="format-detection" content="telephone=no" />
   <meta name="msapplication-tap-highlight" content="no" />
   <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-density-dpi=device-dpi" />
   <link rel="stylesheet" type="text/css" href="css/index.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <title>HitchHikr</title>
@@ -40,17 +40,17 @@
         x = $('#number-people').html();
         if (x > 1) {
           $('#number-people').html( x-1 );
-          $('#plus').css('background-color', '#cbcbcb');
+          $('#plus').removeClass('inactive');
         }
-        else { $('#minus').css('background-color', '#e6e6e6'); }
+        else { $('#minus').addClass('inactive'); }
       });
       $('#plus').click(function() {
         x = $('#number-people').html();
         if (x < 5) {
           $('#number-people').html( +x+1 );
-          $('#minus').css('background-color', '#cbcbcb');
+          $('#minus').removeClass('inactive');
         }
-        else { $('#plus').css('background-color', '#e6e6e6'); }
+        else { $('#plus').addClass('inactive'); }
       });
     </script>
 
